@@ -114,7 +114,7 @@ export default function MainScene({ introComplete }: MainSceneProps) {
 
         {/* Post Processing */}
         <TeleportWarp />
-        <EffectComposer disableNormalPass multisampling={0}>
+        <EffectComposer multisampling={0}>
           <Bloom intensity={1.5} luminanceThreshold={0.2} luminanceSmoothing={0.9} />
           <Vignette darkness={0.5} offset={0.3} />
           <FilmGrain opacity={0.1} />

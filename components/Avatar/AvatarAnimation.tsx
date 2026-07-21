@@ -23,7 +23,7 @@ export function useAvatarAnimation({
 }: AvatarAnimationProps) {
   const [currentState, setCurrentState] = useState<AvatarAnimationState>('idle');
   const prevState = useRef<AvatarAnimationState>('idle');
-  const transitionTimer = useRef<ReturnType<typeof setTimeout>>();
+  const transitionTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     let newState: AvatarAnimationState = 'idle';

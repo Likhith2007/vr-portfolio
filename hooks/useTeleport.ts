@@ -38,7 +38,7 @@ export const useTeleportStore = create<TeleportState>((set) => ({
  */
 export function useTeleport() {
   const store = useTeleportStore();
-  const transitionTimeout = useRef<ReturnType<typeof setTimeout>>();
+  const transitionTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const teleportTo = useCallback(
     (roomId: RoomId, onTransitionMidpoint?: () => void) => {
